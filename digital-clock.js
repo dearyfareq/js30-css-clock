@@ -1,5 +1,5 @@
 function updateTime() {
-  // Array of months
+  // Array of months to convert the 0 - 11 data into names, easier than to manually change each one
   const months = [
     "January",
     "February",
@@ -15,7 +15,7 @@ function updateTime() {
     "December",
   ];
 
-  // Array of days of the week
+  // Array of days of the week, same concept with the months
   const daysOfWeek = [
     "Sunday",
     "Monday",
@@ -26,6 +26,7 @@ function updateTime() {
     "Saturday",
   ];
 
+  //getting the data and separating each value into a constant
   const time = new Date();
   const day = time.getDate();
   const month = time.getMonth();
@@ -35,7 +36,10 @@ function updateTime() {
   const minute = time.getMinutes();
   const second = time.getSeconds();
 
+  //putting time data into an array to loop over, better than an if else statment for each one XP
   var data = [day, month, year, weekday, hour, minute, second];
+
+  //IDs of the elements to be changed, used to loop over the elements
   var elements = [
     "day",
     "month",
@@ -44,9 +48,10 @@ function updateTime() {
     "hour",
     "minute",
     "second",
-    "AmPm"
+    "AmPm",
   ];
 
+  //for loop with the elements's length, added if else to convert the month/weekday into names using the initial two top arrays
   for (var i = 0; i < elements.length; i++) {
     var change = document.getElementById(elements[i]);
     if (elements[i] == "month") {
@@ -57,11 +62,10 @@ function updateTime() {
       change.innerText = data[i] + ":";
     } else if (elements[i] == "minute") {
       change.innerText = data[i] + ":";
-    }  else if (elements[i] == "AmPm") {
-      if (hour < 13){
+    } else if (elements[i] == "AmPm") {
+      if (hour < 13) {
         change.innerText = "AM";
-      }
-      else {
+      } else {
         change.innerText = "PM";
       }
     } else {
@@ -70,4 +74,12 @@ function updateTime() {
   }
 }
 
+//function to run every 1000ms or 1s
 setInterval(updateTime, 1000);
+
+/*
+PS:
+the hour and minute elements have ":" added to them when the innerText is changed.
+time format is in 24, so lower than 13 means its AM, higher is PM.
+the rest or numbers only data are changed without any problems.
+*/

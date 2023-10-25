@@ -1,58 +1,63 @@
+/* normalizing the screen */
 html {
-    font-size: 62.5%;
-    height:100%;
-    min-height:100%;
+  font-size: 62.5%;
+  height: 100%;
+  min-height: 100%;
 }
-
+/* body color and usage of flex to center the clock body */
 body {
-    font: 400 11px/1.4 sans-serif;
-    margin: 0;
-    background: #28282B;
-    height:100%;
-    min-height:100%;
-    word-break: break-word;
-    -webkit-word-break: break-word;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font: 400 11px/1.4 sans-serif;
+  margin: 0;
+  background: #28282b;
+  height: 100%;
+  min-height: 100%;
+  word-break: break-word;
+  -webkit-word-break: break-word;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.clock-body{
-    border: 0.2rem solid white;
-    width: 40rem;
-    height: 15rem;
-    border-radius: 0.2rem;
-    padding: 2rem;
-    padding-top: 3.5rem;
-    transition: ease-in-out 0.3s;
-    -webkit-box-reflect: below 1rem linear-gradient(transparent, rgba(255,255,255,0.1));
+/* used webkit effect for reflection on clock body */
+.clock-body {
+  border: 0.2rem solid white;
+  width: 40rem;
+  height: 15rem;
+  border-radius: 0.2rem;
+  padding: 2rem;
+  padding-top: 3.5rem;
+  transition: ease-in-out 0.3s;
+  -webkit-box-reflect: below 1rem
+    linear-gradient(transparent, rgba(255, 255, 255, 0.1));
 }
-.clock-body:hover{
-    color: #28282B;
-    background-color: #fff;
-    box-shadow: 0 0 2rem #fff;
+/* hover effect on body */
+.clock-body:hover {
+  color: #28282b;
+  background-color: #fff;
+  box-shadow: 0 0 2rem #fff;
 }
-.upper-data{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+/* upper and lower section aligments */
+.upper-data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.lower-data{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.lower-data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.upper{
-    font-size: 3rem;
+.upper {
+  font-size: 3rem;
 }
-.lower{
-    font-size: 7rem;
+.lower {
+  font-size: 7rem;
 }
-.AmPm{
-    font-size: 3.5rem;
-    background-color: #fff;
-    color: #28282B;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+/* AmPm element styling */
+.AmPm {
+  font-size: 3.5rem;
+  background-color: #fff;
+  color: #28282b;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
-
