@@ -44,6 +44,7 @@ function updateTime() {
     "hour",
     "minute",
     "second",
+    "AmPm"
   ];
 
   for (var i = 0; i < elements.length; i++) {
@@ -56,6 +57,13 @@ function updateTime() {
       change.innerText = data[i] + ":";
     } else if (elements[i] == "minute") {
       change.innerText = data[i] + ":";
+    }  else if (elements[i] == "AmPm") {
+      if (hour < 13){
+        change.innerText = "AM";
+      }
+      else {
+        change.innerText = "PM";
+      }
     } else {
       change.innerText = data[i];
     }
